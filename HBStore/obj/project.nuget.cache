@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nl2g9xcQ57zX9sXjko9sqO6LxVtx8nr2Nx8CBY3w5Q1O23nrBbZWHunUNqOoXYRu7zC39Ej+IhH5Zdcut4bZig==",
+  "dgSpecHash": "u+BHzP7qmiVP+g2ZFu1Gg2le/i+NM2rd8WdOItgCVr4UE/6sic/zxjNi+/xkRj7bJv6bOfYaZEVCTK1HYYOE2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sahabt\\HBStore\\HBStore.csproj",
+  "projectFilePath": "c:\\Users\\sahabt\\HBStore\\HBStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sahabt\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\sahabt\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",

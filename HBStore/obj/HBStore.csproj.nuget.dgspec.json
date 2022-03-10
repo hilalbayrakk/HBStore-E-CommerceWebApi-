@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sahabt\\HBStore\\HBStore.csproj": {}
+    "c:\\Users\\sahabt\\HBStore\\HBStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sahabt\\HBStore\\HBStore.csproj": {
+    "c:\\Users\\sahabt\\HBStore\\HBStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sahabt\\HBStore\\HBStore.csproj",
+        "projectUniqueName": "c:\\Users\\sahabt\\HBStore\\HBStore.csproj",
         "projectName": "HBStore",
-        "projectPath": "C:\\Users\\sahabt\\HBStore\\HBStore.csproj",
+        "projectPath": "c:\\Users\\sahabt\\HBStore\\HBStore.csproj",
         "packagesPath": "C:\\Users\\sahabt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sahabt\\HBStore\\obj\\",
+        "outputPath": "c:\\Users\\sahabt\\HBStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sahabt\\AppData\\Roaming\\NuGet\\NuGet.Config"

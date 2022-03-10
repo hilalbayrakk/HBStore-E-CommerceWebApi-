@@ -12,6 +12,8 @@ namespace HBStore.Model
         public double Rating { get; set; }
 
         public bool IsVisibility { get; set; }
+        public int CompanyId { get; set; }
+        public Company Company { get; set; }
 
     }
 }
