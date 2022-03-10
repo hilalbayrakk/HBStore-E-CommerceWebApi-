@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\sahabt\\HBStore\\HBStore.csproj": {}
+    "C:\\Users\\sahabt\\Desktop\\HBStore-E-CommerceWebApi-\\HBStore\\HBStore.csproj": {}
   },
   "projects": {
-    "c:\\Users\\sahabt\\HBStore\\HBStore.csproj": {
+    "C:\\Users\\sahabt\\Desktop\\HBStore-E-CommerceWebApi-\\HBStore\\HBStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\sahabt\\HBStore\\HBStore.csproj",
+        "projectUniqueName": "C:\\Users\\sahabt\\Desktop\\HBStore-E-CommerceWebApi-\\HBStore\\HBStore.csproj",
         "projectName": "HBStore",
-        "projectPath": "c:\\Users\\sahabt\\HBStore\\HBStore.csproj",
+        "projectPath": "C:\\Users\\sahabt\\Desktop\\HBStore-E-CommerceWebApi-\\HBStore\\HBStore.csproj",
         "packagesPath": "C:\\Users\\sahabt\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\sahabt\\HBStore\\obj\\",
+        "outputPath": "C:\\Users\\sahabt\\Desktop\\HBStore-E-CommerceWebApi-\\HBStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sahabt\\AppData\\Roaming\\NuGet\\NuGet.Config"
