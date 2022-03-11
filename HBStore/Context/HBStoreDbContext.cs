@@ -6,15 +6,15 @@ namespace HBStore.Context
 {
     public class HBStoreDbContext : DbContext
     {
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Account> Account { get; set; }
+        public DbSet<Address> Address { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<City> Cities { get; set; }
+        public DbSet<City> City{ get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Complaint> Complaints { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<District> Districts { get; set; }
+        public DbSet<District> District { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Product> Products { get; set; }
