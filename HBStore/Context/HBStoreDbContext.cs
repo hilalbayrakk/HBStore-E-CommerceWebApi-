@@ -41,6 +41,7 @@ namespace HBStore.Context
             PaymentDatabaseBuilder.TableBuilder(modelBuilder);
             ProductDatabaseBuilder.TableBuilder(modelBuilder);
             SupplierDatabaseBuilder.TableBuilder(modelBuilder);
+            UserDatabaseBuilder.TableBuilder(modelBuilder);
 
         }
 

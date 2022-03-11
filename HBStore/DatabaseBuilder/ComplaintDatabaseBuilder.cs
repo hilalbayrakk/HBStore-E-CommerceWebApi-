@@ -13,13 +13,13 @@ namespace HBStore.DatabaseBuilder
                 {
                     Id = 1,
                     Detail = "blablablablabla",
-                    CustomerId = 1
+                   
                 },
                 new Complaint
                 {
                     Id = 2,
                     Detail = "asdadfsgfgdfdzr",
-                    CustomerId = 2
+                   
                 }
             );
         }
@@ -29,7 +29,7 @@ namespace HBStore.DatabaseBuilder
     {
         entity.HasKey(e => e.Id);
         entity.Property(e => e.Detail).IsRequired();
-        entity.HasOne(e => e.Customer).WithMany(e => e!.Complaints).HasForeignKey(e => e.CustomerId);
+        
     });
             SetDataToDB(modelBuilder);
         }
