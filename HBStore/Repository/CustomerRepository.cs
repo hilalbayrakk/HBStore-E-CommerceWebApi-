@@ -1,6 +1,8 @@
+using HBStore.Interface.InterfaceRepository;
+
 namespace HBStore.Repository
 {
-    public class CustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         
     }

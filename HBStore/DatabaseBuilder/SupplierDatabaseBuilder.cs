@@ -28,6 +28,7 @@ namespace HBStore.DatabaseBuilder
         entity.HasKey(e => e.Id);
         entity.Property(e => e.Name).IsRequired();
         entity.HasOne(e => e.Company).WithMany(e => e.Suppliers).HasForeignKey(e => e.CompanyId);
+        entity.HasOne(e => e.Product).WithMany(e => e.Suppliers).HasForeignKey(e => e.CompanyId);
     });
             SetDataToDB(modelBuilder);
         }

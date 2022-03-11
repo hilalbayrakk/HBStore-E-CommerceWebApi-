@@ -14,14 +14,12 @@ namespace HBStore.DatabaseBuilder
                 {
                     Id = 1,
                     Type = "Havale",
-                    OrderId = 1,
                     CardId = 1
                 },
                 new Payment
                 {
                     Id = 2,
                     Type = "Kredi Kartı",
-                    OrderId = 2,
                     CardId = 2
                 });
         }

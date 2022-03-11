@@ -1,6 +1,8 @@
+using HBStore.Interface.InterfaceService;
+
 namespace HBStore.Service
 {
-    public class ComplaintService
+    public class ComplaintService : IComplaintService
     {
         
     }

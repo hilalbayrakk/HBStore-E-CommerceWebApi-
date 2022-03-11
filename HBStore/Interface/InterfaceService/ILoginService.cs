@@ -1,9 +1,11 @@
+using HBStore.DTO;
+using HBStore.Model;
+
 namespace HBStore.Interface.InterfaceService
 {
-    public class ILoginService
+    public interface ILoginService
     {
-       // LoginResponseDTO Authenticate(LoginDTO model);
-      //  Account findAccountById(int id);
-
+        LoginResponseDTO Authenticate(LoginDTO model);
+        Account findAccountById(int id);
     }
 }

@@ -13,13 +13,11 @@ namespace HBStore.Context
         public DbSet<City> Cities { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Complaint> Complaints { get; set; }
-        public DbSet<Country> Countries { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<State> States { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
 
 

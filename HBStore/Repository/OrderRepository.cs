@@ -1,6 +1,8 @@
+using HBStore.Interface.InterfaceRepository;
+
 namespace HBStore.Repository
 {
-    public class OrderRepository
+    public class OrderRepository : IOrderRepository
     {
         
     }

@@ -7,11 +7,11 @@ namespace HBStore.Model
         public int ProductId { get; set; }
         public virtual ICollection<Product>? Products { get; set; }
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
         public virtual ICollection<Customer>? Customers { get; set; }
         public int PaymentId { get; set; }
-        public Payment Payment { get; set; }
-        //public virtual ICollection<Payment>? Payments { get; set; }
+        public virtual Payment Payment { get; set; }
+        
        
     }
 }

@@ -32,7 +32,6 @@ namespace HBStore.DatabaseBuilder
              {
                  entity.HasKey(e => e.Id);
                  entity.Property(e => e.Name).IsRequired();
-                 entity.HasOne(e => e.Customer).WithMany(e => e!.Orders).HasForeignKey(e => e.CustomerId);
                  entity.HasOne(e => e.Payment).WithMany(e => e!.Orders).HasForeignKey(e => e.PaymentId);
              });
             SetDataToDB(modelBuilder);

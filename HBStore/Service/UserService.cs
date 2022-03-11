@@ -2,7 +2,7 @@ using HBStore.Interface.InterfaceService;
 
 namespace HBStore.Service
 {
-    public class OrderService : IOrderService
+    public class UserService : IUserService
     {
         
     }

@@ -9,6 +9,7 @@ namespace HBStore.Model
         public string Password { get; set; }
         public string? ProfileImageUrl { get; set; }
         public string GsmNumber { get; set; }
-        public Customer Customer { get; set; }
+        
+        public virtual ICollection<Customer>? Customers { get; set; }
     }
 }

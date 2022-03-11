@@ -13,9 +13,9 @@ namespace HBStore.Model
 
         public bool IsVisibility { get; set; }
         public int CompanyId { get; set; }
-        public Company Company { get; set; }
+        public virtual Company Company { get; set; }
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
 
     }

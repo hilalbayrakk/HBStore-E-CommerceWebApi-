@@ -1,6 +1,8 @@
+using HBStore.Interface.InterfaceService;
+
 namespace HBStore.Service
 {
-    public class CustomerService
+    public class CustomerService : ICustomerService
     {
         
     }
