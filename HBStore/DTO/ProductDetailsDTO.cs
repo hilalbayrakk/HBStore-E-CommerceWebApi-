@@ -1,6 +1,6 @@
 namespace HBStore.DTO
 {
-    public class ProductDetailDTO
+    public class ProductDetailsDTO
     {
         public string ProductName { get; set; }
         public decimal UnitPrice { get; set; }

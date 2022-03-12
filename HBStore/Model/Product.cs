@@ -14,8 +14,6 @@ namespace HBStore.Model
         public virtual Brand? Brand { get; set; }
         public int CompanyId { get; set; }
         public virtual Company? Company { get; set; }
-        public int OrderId { get; set; }
-        public virtual Order? Order { get; set; }
         public virtual ICollection<Order>? Orders { get; set; }
         public virtual ICollection<Supplier>? Suppliers { get; set; }
     }
