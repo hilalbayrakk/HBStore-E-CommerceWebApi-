@@ -20,7 +20,7 @@ namespace HBStore.Service
                 await _brandRepository.AddBrandAsync(brand);
                 return brand;
             }
-            throw new InvalidOperationException("Aynı isimde bir başka marka bulunmaktadır!");
+            throw new InvalidOperationException("Bu isimde bir marka bulunmaktadir!");
         }
 
         public async Task DeleteBrandAsync(Brand brand)
@@ -30,7 +30,7 @@ namespace HBStore.Service
             {
                 await _brandRepository.DeleteBrandAsync(brand);
             }
-            throw new Exception("Silinecek marka bulunamadı!");
+            throw new Exception("Silinecek marka bulunamadi!");
         }
 
         public async Task<Brand> UpdateBrandAsync(Brand brand)
@@ -40,7 +40,7 @@ namespace HBStore.Service
             {
                 return await _brandRepository.UpdateBrandAsync(updatedBrand);
             }
-           throw new InvalidOperationException("Böyle bir marka bulunmamaktadır!");
+           throw new InvalidOperationException("Boyle bir marka bulunmamaktadir!");
         }
         public async Task<List<Brand>> GetAllBrandAsync()
         {

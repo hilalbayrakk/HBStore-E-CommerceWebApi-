@@ -21,7 +21,7 @@ namespace HBStore.Service
             {
                 return await _genderRepository.AddGender(gender);
             }
-            throw new InvalidOperationException("Aynı isimde bir cinsiyet bulunmaktadır!");
+            throw new InvalidOperationException("Aynı isimde bir cinsiyet bulunmaktadir!");
         }
 
         public async Task DeleteGender(Gender gender)
@@ -31,7 +31,7 @@ namespace HBStore.Service
             {
                 await _genderRepository.DeleteGender(gender);
             }
-            throw new InvalidOperationException("Silinecek cinsiyet bulunamadı!");
+            throw new InvalidOperationException("Silinecek cinsiyet bulunamadi!");
         }
 
         public async Task<Gender> UpdateGender(Gender gender, int genderId)
@@ -43,7 +43,7 @@ namespace HBStore.Service
                 await _genderRepository.UpdateGender(gender);
                 return gender;
             }
-            throw new InvalidOperationException("Güncellenecek cinsiyet bulunamadı!");
+            throw new InvalidOperationException("Guncellenecek cinsiyet bulunamadi!");
         }
 
         public async Task<List<Gender>> GetAllGender()

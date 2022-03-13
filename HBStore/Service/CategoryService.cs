@@ -21,7 +21,7 @@ namespace HBStore.Service
             {
                 return await _categoryRepository.AddCategory(category);
             }
-            throw new InvalidOperationException ("Aynı isimde başka bir kategori bulunuyor!");
+            throw new InvalidOperationException ("Aynı isimde baska bir kategori bulunuyor!");
         }
 
         public async Task DeleteCategory(Category category)
@@ -31,7 +31,7 @@ namespace HBStore.Service
            {
                await _categoryRepository.DeleteCategory(category);
            }
-           throw new Exception("Silinecek kategori bulunamadı!");
+           throw new Exception("Silinecek kategori bulunamadi!");
         }
 
         public async Task<Category> UpdateCategory(int id, Category category)
@@ -43,7 +43,7 @@ namespace HBStore.Service
                 await _categoryRepository.UpdateCategory(category);
                 return category;
             }
-            throw new InvalidOperationException("Güncellenecek kategori bulunamadı.");
+            throw new InvalidOperationException("Guncellenecek kategori bulunamadi!");
         }
 
         public async Task<List<Category>> GetAllCategory()

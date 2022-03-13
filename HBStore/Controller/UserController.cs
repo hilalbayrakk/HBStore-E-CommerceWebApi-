@@ -4,7 +4,7 @@ namespace HBStore.Controller
 {
     [ApiController]
     [Route("[controller]")]
-    public class OrderController : ControllerBase
+    public class UserController : ControllerBase
     {
 
     }

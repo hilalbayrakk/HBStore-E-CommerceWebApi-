@@ -21,7 +21,7 @@ namespace HBStore.Service
                 await _companyRepository.AddCompanyAsync(company);
                 return company;
             }
-            throw new Exception("Aynı isimde baska bir company bulunmaktadır!");
+            throw new Exception("Aynı isimde baska bir sirket bulunmaktadir!");
         }
 
         public async Task DeleteCompanyAsync(Company company)
@@ -31,7 +31,7 @@ namespace HBStore.Service
            {
                await _companyRepository.DeleteCompanyAsync(company);
            }
-           throw new Exception("Silinecek company bulunamadı!");
+           throw new Exception("Silinecek sirket bulunamadi!");
         }
 
         public async Task<Company> UpdateCompanyAsync(int id, Company company)
@@ -43,7 +43,7 @@ namespace HBStore.Service
                 await _companyRepository.UpdateCompanyAsync(result);
                 return company;
             }
-             throw new Exception("Güncellenecek company bulunamadı!");
+             throw new Exception("Guncellenecek sirket bulunamadi!");
         }
 
         public async Task<List<Company>> GetAllCompanyAsync()

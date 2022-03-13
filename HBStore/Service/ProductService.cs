@@ -20,7 +20,7 @@ namespace HBStore.Service
             {
                 return await _productRepository.AddProduct(product);
             }
-            throw new InvalidOperationException("Aynı isimde başka bir ürün bulunuyor!");
+            throw new InvalidOperationException("Aynı isimde baska bir urun bulunuyor!");
         }
 
         public async Task DeleteProduct(Product product)
@@ -30,7 +30,7 @@ namespace HBStore.Service
             {
                 await _productRepository.DeleteProduct(product);
             }
-            throw new Exception("Silinecek ürün bulunamadı.");
+            throw new Exception("Silinecek urun bulunamadi!");
         }
 
         public async Task<List<Product>> GetAllProduct()
@@ -47,7 +47,7 @@ namespace HBStore.Service
                 await _productRepository.UpdateProduct(product);
                 return product;
             }
-            throw new InvalidOperationException("Güncellenecek ürün bulunamadı!");
+            throw new InvalidOperationException("Guncellenecek urun bulunamadi!");
         }
 
         public async Task<Product> GetProductByName(string productName)
@@ -57,7 +57,7 @@ namespace HBStore.Service
            {
                 return await result;
            }
-           throw new InvalidOperationException("Ürün bulunamadı!");
+           throw new InvalidOperationException("Bu isimde bir urun bulunamadi!");
         }
 
         public async Task<Product> GetByProductId(int productId)

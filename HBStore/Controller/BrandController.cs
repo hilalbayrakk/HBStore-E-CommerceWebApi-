@@ -1,7 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+
 namespace HBStore.Controller
 {
-    public class BrandController
+    [ApiController]
+    [Route("[controller]")]
+    public class BrandController : ControllerBase
     {
-        
+
     }
+
 }

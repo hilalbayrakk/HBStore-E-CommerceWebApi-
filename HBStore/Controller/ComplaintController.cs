@@ -1,7 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+
 namespace HBStore.Controller
 {
-    public class ComplaintController
+    [ApiController]
+    [Route("[controller]")]
+    public class ComplaintController : ControllerBase
     {
-        
+
     }
+
 }
