@@ -10,6 +10,7 @@ namespace HBStore.Model
         public bool IsBlocked { get; set; }
         public bool Visibility { get; set; }
         public virtual ICollection<Role>? Role { get; set; }
+        public virtual ICollection<User>Users { get; set; }
 
         public Account()
         {

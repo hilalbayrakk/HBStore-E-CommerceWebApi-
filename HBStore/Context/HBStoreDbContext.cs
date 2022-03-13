@@ -15,6 +15,7 @@ namespace HBStore.Context
         public DbSet<Complaint> Complaints { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<District> District { get; set; }
+        public DbSet<Gender> Genders { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -35,6 +36,7 @@ namespace HBStore.Context
             AddressDatabaseBuilder.TableBuilder(modelBuilder);
             ComplaintDatabaseBuilder.TableBuilder(modelBuilder);
             CustomerDatabaseBuilder.TableBuilder(modelBuilder);
+            GenderDatabaseBuilder.TableBuilder(modelBuilder);
             OrderDatabaseBuilder.TableBuilder(modelBuilder);
             PaymentDatabaseBuilder.TableBuilder(modelBuilder);
             ProductDatabaseBuilder.TableBuilder(modelBuilder);

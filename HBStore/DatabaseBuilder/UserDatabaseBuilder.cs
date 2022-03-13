@@ -40,6 +40,9 @@ namespace HBStore.DatabaseBuilder
         entity.Property(e => e.Email).IsRequired();
         entity.Property(e => e.Password).IsRequired();
         entity.Property(e => e.GsmNumber).IsRequired();
+        entity.Property(e => e.BirthDate);
+        entity.HasOne(p => p.Gender).WithMany(c => c!.Users).HasForeignKey(p => p.GenderId);
+        entity.HasOne(p => p.Account).WithMany(c => c!.Users).HasForeignKey(p => p.AccountId);
 
 
     });
