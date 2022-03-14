@@ -10,6 +10,7 @@ namespace HBStore.Model
         public virtual Complaint? Complaint { get; set; }
         public int? OrderId { get; set; }
         public virtual Order? Order { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
         
     }
 }

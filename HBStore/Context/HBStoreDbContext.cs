@@ -11,6 +11,7 @@ namespace HBStore.Context
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<City> City{ get; set; }
+        public DbSet<Comment> Comments { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Complaint> Complaints { get; set; }
         public DbSet<Customer> Customers { get; set; }

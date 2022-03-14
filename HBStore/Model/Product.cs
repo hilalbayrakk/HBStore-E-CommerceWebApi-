@@ -16,5 +16,6 @@ namespace HBStore.Model
         public virtual Company? Company { get; set; }
         public virtual ICollection<Order>? Orders { get; set; }
         public virtual ICollection<Supplier>? Suppliers { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

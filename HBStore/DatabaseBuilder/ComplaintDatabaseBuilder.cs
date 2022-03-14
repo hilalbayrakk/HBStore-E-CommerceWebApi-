@@ -13,13 +13,13 @@ namespace HBStore.DatabaseBuilder
                 {
                     Id = 1,
                     Detail = "blablablablabla",
-                   
+
                 },
                 new Complaint
                 {
                     Id = 2,
                     Detail = "asdadfsgfgdfdzr",
-                   
+
                 }
             );
         }
@@ -29,7 +29,7 @@ namespace HBStore.DatabaseBuilder
     {
         entity.HasKey(e => e.Id);
         entity.Property(e => e.Detail).IsRequired();
-        
+
     });
             SetDataToDB(modelBuilder);
         }
