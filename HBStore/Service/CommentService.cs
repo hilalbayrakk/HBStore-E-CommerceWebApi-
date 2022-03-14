@@ -53,14 +53,14 @@ namespace HBStore.Service
             return await _commentRepository.GetCommentById(id);
         }
 
-        public async Task<List<Comment>> GetCommentByCustomerId(int customerId)
+        public async Task<List<Comment>> GetAllCommentByCustomerId(int customerId)
         {
-            return await _commentRepository.GetCommentByCustomerId(customerId);
+            return await _commentRepository.GetAllCommentByCustomerId(customerId);
         }
 
-        public async Task<List<Comment>> GetCommentByProductId(int productId)
+        public async Task<List<Comment>> GetAllCommentByProductId(int productId)
         {
-            return await _commentRepository.GetCommentByProductId(productId);
+            return await _commentRepository.GetAllCommentByProductId(productId);
         }
 
 

@@ -10,7 +10,7 @@ namespace HBStore.Interface.InterfaceService
         Task DeleteComment(Comment comment);
         Task<List<Comment>> GetAllComment();
         Task<Comment> GetCommentById(int id);
-        Task<List<Comment>> GetCommentByCustomerId(int customerId);
-        Task<List<Comment>> GetCommentByProductId(int productId);
+        Task<List<Comment>> GetAllCommentByCustomerId(int customerId);
+        Task<List<Comment>> GetAllCommentByProductId(int productId);
     }
 }

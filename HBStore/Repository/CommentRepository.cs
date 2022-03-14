@@ -43,12 +43,12 @@ namespace HBStore.Repository
            return await _context.Comments.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<Comment>> GetCommentByCustomerId(int customerId)
+        public async Task<List<Comment>> GetAllCommentByCustomerId(int customerId)
         {
             return await _context.Comments.Where(x => x.CustomerId == customerId).ToListAsync();
         }
 
-        public async Task<List<Comment>> GetCommentByProductId(int productId)
+        public async Task<List<Comment>> GetAllCommentByProductId(int productId)
         {
             return await _context.Comments.Where(x => x.ProductId == productId).ToListAsync();
         }
