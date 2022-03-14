@@ -1,5 +1,5 @@
 using HBStore.DTO;
-using HBStore.Interface.InterfaceService;
+using HBStore.Interface;
 using HBStore.Security;
 using Microsoft.AspNetCore.Mvc;
 

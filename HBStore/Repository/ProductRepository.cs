@@ -1,6 +1,6 @@
 using HBStore.Context;
 using HBStore.DTO;
-using HBStore.Interface.InterfaceRepository;
+using HBStore.Interface;
 using HBStore.Model;
 using Microsoft.EntityFrameworkCore;
 

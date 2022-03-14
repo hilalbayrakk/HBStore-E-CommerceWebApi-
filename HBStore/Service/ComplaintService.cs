@@ -1,6 +1,5 @@
 using HBStore.Context;
-using HBStore.Interface.InterfaceRepository;
-using HBStore.Interface.InterfaceService;
+using HBStore.Interface;
 using HBStore.Model;
 
 namespace HBStore.Service

@@ -1,6 +1,6 @@
 using HBStore.Model;
 using Microsoft.AspNetCore.Mvc;
-using HBStore.Interface.InterfaceService;
+using HBStore.Interface;
 
 
 namespace HBStore.Controller
