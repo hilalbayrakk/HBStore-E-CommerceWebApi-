@@ -14,38 +14,38 @@ namespace HBStore.Repository
             _context = context;
 
         }
-        public async Task<Brand> AddBrandAsync(Brand brand)
+        public async Task<Brand> AddBrand(Brand brand)
         {
             await _context.Brands.AddAsync(brand);
             await _context.SaveChangesAsync();
             return brand;
         }
 
-        public async Task DeleteBrandAsync(Brand brand)
+        public async Task DeleteBrand(Brand brand)
         {
             _context.Brands.Remove(brand);
             await _context.SaveChangesAsync();
         }
 
 
-        public async Task<Brand> UpdateBrandAsync(Brand brand)
+        public async Task<Brand> UpdateBrand(Brand brand)
         {
             _context.Brands.Update(brand);
             await _context.SaveChangesAsync();
             return brand;
         }
 
-        public async Task<List<Brand>> GetAllBrandAsync()
+        public async Task<List<Brand>> GetAllBrand()
         {
             return await _context.Brands.ToListAsync();
         }
 
-        public async Task<Brand> GetByBrandIdAsync(int brandId)
+        public async Task<Brand> GetByBrandId(int brandId)
         {
             return await _context.Brands.FirstOrDefaultAsync(x => x.Id == brandId);
         }
 
-        public async Task<Brand> GetByBrandNameAsync(string brandName)
+        public async Task<Brand> GetByBrandName(string brandName)
         {
             return await _context.Brands.FirstOrDefaultAsync(x => x.Name == brandName);
         }

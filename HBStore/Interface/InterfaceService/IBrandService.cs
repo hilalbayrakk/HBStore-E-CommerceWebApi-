@@ -4,11 +4,11 @@ namespace HBStore.Interface.InterfaceService
 {
     public interface IBrandService
     {
-        Task<Brand> AddBrandAsync(Brand brand);
-        Task DeleteBrandAsync(Brand brand);
-        Task<Brand> UpdateBrandAsync(Brand brand);
-        Task<List<Brand>> GetAllBrandAsync();
-        Task<Brand> GetByBrandIdAsync(int brandId);
-        Task<Brand> GetByBrandNameAsync(string brandName);
+        Task<Brand> AddBrand(Brand brand);
+        Task DeleteBrand(Brand brand);
+        Task<Brand> UpdateBrand(Brand brand,int id );
+        Task<List<Brand>> GetAllBrand();
+        Task<Brand> GetByBrandId(int brandId);
+        Task<Brand> GetByBrandName(string brandName);
     }
 }

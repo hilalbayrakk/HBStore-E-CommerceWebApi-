@@ -12,49 +12,49 @@ namespace HBStore.Service
         {
             this._brandRepository = _brandRepository;
         }
-        public async Task<Brand> AddBrandAsync(Brand brand)
+        public async Task<Brand> AddBrand(Brand brand)
         {
-            var result = await _brandRepository.GetByBrandNameAsync(brand.Name);
+            var result = await _brandRepository.GetByBrandName(brand.Name);
             if(result == null)
             {
-                await _brandRepository.AddBrandAsync(brand);
+                await _brandRepository.AddBrand(brand);
                 return brand;
             }
             throw new InvalidOperationException("Bu isimde bir marka bulunmaktadir!");
         }
 
-        public async Task DeleteBrandAsync(Brand brand)
+        public async Task DeleteBrand(Brand brand)
         {
-            var deleteBrand = await _brandRepository.GetByBrandIdAsync(brand.Id);
-            if(deleteBrand != null)
+            var result = await _brandRepository.GetByBrandId(brand.Id);
+            if(result != null)
             {
-                await _brandRepository.DeleteBrandAsync(brand);
+                await _brandRepository.DeleteBrand(brand);
             }
             throw new Exception("Silinecek marka bulunamadi!");
         }
 
-        public async Task<Brand> UpdateBrandAsync(Brand brand)
+        public async Task<Brand> UpdateBrand (Brand brand, int id)
         {
-            var updatedBrand = await _brandRepository.GetByBrandIdAsync(brand.Id);
-            if(updatedBrand != null)
+            var result = await _brandRepository.GetByBrandId(id);
+            if(result != null)
             {
-                return await _brandRepository.UpdateBrandAsync(updatedBrand);
+                return await _brandRepository.UpdateBrand(result);
             }
            throw new InvalidOperationException("Boyle bir marka bulunmamaktadir!");
         }
-        public async Task<List<Brand>> GetAllBrandAsync()
+        public async Task<List<Brand>> GetAllBrand()
         {
-            return await _brandRepository.GetAllBrandAsync();
+            return await _brandRepository.GetAllBrand();
         }
 
-        public async Task<Brand> GetByBrandIdAsync(int brandId)
+        public async Task<Brand> GetByBrandId(int brandId)
         {
-            return await _brandRepository.GetByBrandIdAsync(brandId);
+            return await _brandRepository.GetByBrandId(brandId);
         }
 
-        public async Task<Brand> GetByBrandNameAsync(string brandName)
+        public async Task<Brand> GetByBrandName(string brandName)
         {
-            return await _brandRepository.GetByBrandNameAsync(brandName);
+            return await _brandRepository.GetByBrandName(brandName);
         }
 
     }
