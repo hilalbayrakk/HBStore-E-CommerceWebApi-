@@ -15,12 +15,24 @@ using HBStore.Interface.InterfaceService;
 using HBStore.Service;
 using HBStore.Context;
 using HBStore.Security;
+using HBStore.ResponseObjectResults;
+using HBStore.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddFluentValidation(opt =>
+            {
+                opt.RegisterValidatorsFromAssemblyContaining<Program>();
+            }).ConfigureApiBehaviorOptions(options =>
+            {
+                options.InvalidModelStateResponseFactory = context =>
+                {
+                    return new CustomBadRequest(context);
+                };
+            });
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
