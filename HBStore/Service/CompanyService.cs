@@ -12,52 +12,52 @@ namespace HBStore.Service
             _companyRepository = companyRepository;
         }
 
-        public async Task<Company> AddCompanyAsync(Company company)
+        public async Task<Company> AddCompany(Company company)
         {
-            var result = await _companyRepository.GetByCompanyNameAsync(company.Name);
+            var result = await _companyRepository.GetByCompanyName(company.Name);
             if(result == null)
             {
-                await _companyRepository.AddCompanyAsync(company);
+                await _companyRepository.AddCompany(company);
                 return company;
             }
             throw new Exception("Aynı isimde baska bir sirket bulunmaktadir!");
         }
 
-        public async Task DeleteCompanyAsync(Company company)
+        public async Task DeleteCompany(Company company)
         {
-           var result = await _companyRepository.GetByCompanyIdAsync(company.Id);
+           var result = await _companyRepository.GetByCompanyId(company.Id);
            if(result != null)
            {
-               await _companyRepository.DeleteCompanyAsync(company);
+               await _companyRepository.DeleteCompany(company);
            }
            throw new Exception("Silinecek sirket bulunamadi!");
         }
 
-        public async Task<Company> UpdateCompanyAsync(int id, Company company)
+        public async Task<Company> UpdateCompany(int id, Company company)
         {
-            var result = await _companyRepository.GetByCompanyIdAsync(id);
+            var result = await _companyRepository.GetByCompanyId(id);
             if(result != null)
             {
                 result = company;
-                await _companyRepository.UpdateCompanyAsync(result);
+                await _companyRepository.UpdateCompany(result);
                 return company;
             }
              throw new Exception("Guncellenecek sirket bulunamadi!");
         }
 
-        public async Task<List<Company>> GetAllCompanyAsync()
+        public async Task<List<Company>> GetAllCompany()
         {
-            return await _companyRepository.GetAllCompanyAsync();
+            return await _companyRepository.GetAllCompany();
         }
 
-        public async Task<Company> GetByCompanyIdAsync(int companyId)
+        public async Task<Company> GetByCompanyId(int companyId)
         {
-           return await _companyRepository.GetByCompanyIdAsync(companyId);
+           return await _companyRepository.GetByCompanyId(companyId);
         }
 
-        public async Task<Company> GetByCompanyNameAsync(string companyName)
+        public async Task<Company> GetByCompanyName(string companyName)
         {
-            return await _companyRepository.GetByCompanyNameAsync(companyName);
+            return await _companyRepository.GetByCompanyName(companyName);
         }
 
 

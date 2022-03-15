@@ -18,38 +18,38 @@ namespace HBStore.Controller
         [HttpPost("add")]
         public async Task<Company> Add(Company company)
         {
-            await _companyService.AddCompanyAsync(company);
+            await _companyService.AddCompany(company);
             return company;
         }
 
         [HttpPut("update")]
         public async Task<Company> Update([FromQuery] int id, Company company)
         {
-            return await _companyService.UpdateCompanyAsync(id, company);
+            return await _companyService.UpdateCompany(id, company);
         }
 
         [HttpDelete]
         public async Task Delete(Company company)
         {
-            await _companyService.DeleteCompanyAsync(company);
+            await _companyService.DeleteCompany(company);
         }
 
         [HttpGet("getall")]
-        public async Task<List<Company>> GetCompanyAsync(Company company)
+        public async Task<List<Company>> GetCompany(Company company)
         {
-            return await _companyService.GetAllCompanyAsync();
+            return await _companyService.GetAllCompany();
         }
 
         [HttpGet("getbyid")]
-        public async Task<Company> GetByCompanyIdAsync([FromQuery] int companyId)
+        public async Task<Company> GetByCompanyId([FromQuery] int companyId)
         {
-            return await _companyService.GetByCompanyIdAsync(companyId);
+            return await _companyService.GetByCompanyId(companyId);
         }
 
         [HttpGet("getbyname")]
         public async Task<Company> GetByCompanyName([FromQuery] string companyName)
         {
-            return await _companyService.GetByCompanyNameAsync(companyName);
+            return await _companyService.GetByCompanyName(companyName);
         }
     }
 }

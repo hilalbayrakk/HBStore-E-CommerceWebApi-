@@ -34,7 +34,7 @@ namespace HBStore.Repository
             return await _context.Set<Account>().SingleOrDefaultAsync(a => a.Email == email);
         }
 
-        public async Task<Account> UpdateAccountByEmail(string email, Account account)
+        public async Task<Account> UpdateAccountByEmail( Account account, string email)
         {
             _context.Update(account);
             await _context.SaveChangesAsync();

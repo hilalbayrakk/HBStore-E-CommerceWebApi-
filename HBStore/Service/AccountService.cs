@@ -39,17 +39,17 @@ namespace HBStore.Service
 
         public async Task<Account> Role()
         {
-            throw new NotImplementedException();        //halledicez
+            throw new NotImplementedException();       
         }
 
         public async Task<Account> UpdateAccountByEmail(Account account, string email)
         {
-            return await _accountRepository.UpdateAccountByEmail(email, account);
+            return await _accountRepository.UpdateAccountByEmail(account, email);
         }
 
         public async Task<Account> UpdateAccountPassword(Account account, string oldpassword, string newpassword)
         {
-            return await _accountRepository.UpdateAccountPassword(account, oldpassword, newpassword);     //sonradan bir kontrol yap tekrardan ve repoda daraltma yapacaz unutma...
+            return await _accountRepository.UpdateAccountPassword(account, oldpassword, newpassword);    
 
         }
 

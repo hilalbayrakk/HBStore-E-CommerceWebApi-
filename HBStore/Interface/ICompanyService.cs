@@ -4,11 +4,11 @@ namespace HBStore.Interface
 {
     public interface ICompanyService
     {
-        Task<Company> AddCompanyAsync(Company company);
-        Task DeleteCompanyAsync(Company company);
-        Task<Company> UpdateCompanyAsync(int id, Company company);
-        Task<List<Company>> GetAllCompanyAsync();
-        Task<Company> GetByCompanyIdAsync(int companyId);
-        Task<Company> GetByCompanyNameAsync(string companyName);
+        Task<Company> AddCompany(Company company);
+        Task DeleteCompany(Company company);
+        Task<Company> UpdateCompany(int id, Company company);
+        Task<List<Company>> GetAllCompany();
+        Task<Company> GetByCompanyId(int companyId);
+        Task<Company> GetByCompanyName(string companyName);
     }
 }

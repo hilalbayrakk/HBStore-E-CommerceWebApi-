@@ -13,37 +13,37 @@ namespace HBStore.Repository
             _context = context;
         }
 
-        public async Task<Company> AddCompanyAsync(Company company)
+        public async Task<Company> AddCompany(Company company)
         {
             await _context.Companies.AddAsync(company);
             await _context.SaveChangesAsync();
             return company;
         }
 
-        public async Task DeleteCompanyAsync(Company company)
+        public async Task DeleteCompany(Company company)
         {
             _context.Companies.Remove(company);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Company> UpdateCompanyAsync(Company company)
+        public async Task<Company> UpdateCompany(Company company)
         {
             _context.Companies.Update(company);
             await _context.SaveChangesAsync();
             return company;
         }
 
-        public async Task<List<Company>> GetAllCompanyAsync()
+        public async Task<List<Company>> GetAllCompany()
         {
             return await _context.Companies.ToListAsync();
         }
 
-        public async Task<Company> GetByCompanyIdAsync(int companyId)
+        public async Task<Company> GetByCompanyId(int companyId)
         {
             return await _context.Companies.FirstOrDefaultAsync(x => x.Id == companyId);
         }
 
-        public async Task<Company> GetByCompanyNameAsync(string companyName)
+        public async Task<Company> GetByCompanyName(string companyName)
         {
             return await _context.Companies.FirstOrDefaultAsync(x => x.Name == companyName);
         }

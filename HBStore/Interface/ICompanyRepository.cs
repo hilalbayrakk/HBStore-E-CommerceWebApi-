@@ -4,12 +4,12 @@ namespace HBStore.Interface
 {
     public interface ICompanyRepository
     {
-        Task<Company> AddCompanyAsync(Company company);
-         Task DeleteCompanyAsync(Company company);
-        Task<Company> UpdateCompanyAsync(Company company);
-        Task<List<Company>> GetAllCompanyAsync();
-        Task<Company> GetByCompanyIdAsync(int companyId);
-        Task<Company> GetByCompanyNameAsync(string companyName);
+        Task<Company> AddCompany(Company company);
+         Task DeleteCompany(Company company);
+        Task<Company> UpdateCompany(Company company);
+        Task<List<Company>> GetAllCompany();
+        Task<Company> GetByCompanyId(int companyId);
+        Task<Company> GetByCompanyName(string companyName);
 
     }
 }
