@@ -22,9 +22,9 @@ namespace HBStore.Controller
         }
 
         [HttpGet("getaddressbyid")]
-        public async Task<Address> GetAddress([FromQuery] int id)
+        public async Task<Address> GetAddressById([FromQuery] int id)
         {
-            return await _IAddressService.GetAddress(id);
+            return await _IAddressService.GetAddressById(id);
         }
 
         [HttpGet("getalldistrictscitybyid")]
@@ -40,9 +40,9 @@ namespace HBStore.Controller
         }
 
         [HttpDelete("deleteddress")]
-        public async Task<Address> DeleteAddress([FromQuery] int id)
+        public async Task DeleteAddress( Address address)
         {
-            return await _IAddressService.DeleteAddress(id);
+           await _IAddressService.DeleteAddress(address);
         }
 
         [HttpPut("updateaddress")]

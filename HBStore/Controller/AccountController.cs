@@ -16,6 +16,8 @@ namespace HBStore.Controller
         {
             _accountService = accountService;
         }
+
+
         [HttpPost]
         public async Task<Account> CreateNewAccount(AccountDTO account)
         {
@@ -28,6 +30,7 @@ namespace HBStore.Controller
             };
             return await _accountService.CreateNewAccount(accountresult);
         }
+
         [HttpPut("update")]
         public async Task<Account> UpdateAccountByEmail(Account account, string email)
         {
@@ -41,6 +44,7 @@ namespace HBStore.Controller
             var allAccounts = await _accountService.GetAllAccounts();
             return allAccounts;
         }
+        
         [HttpGet("getbyemail")]
         public async Task<Account> GetByAccountEmail(string email)
         {
