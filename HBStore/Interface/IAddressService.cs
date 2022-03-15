@@ -3,12 +3,12 @@ using HBStore.Model;
 namespace HBStore.Interface
 {
     public interface IAddressService
-    {
-        Task<Address> GetAddress(int id);
-        Task<List<Address>> GetAllAddress();
+    { 
         Task<Address> RegisterAddress(Address address);
-        Task<Address> DeleteAddress(int id);
+        Task DeleteAddress(Address address);
         Task<Address> UpdateAddress(Address address);
+        Task<List<Address>> GetAllAddress();
+        Task<Address> GetAddressById(int id);
         Task<City> CreateCity(City city);
         Task<City> DeleteCity(City city);
         Task<District> CreateDistrict(District district);
