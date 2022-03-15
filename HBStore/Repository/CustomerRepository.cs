@@ -39,7 +39,7 @@ namespace HBStore.Repository
             return await _context.Customers.ToListAsync();
         }
 
-        public async Task<Customer> GetByCustomerId(int customerId)
+        public async Task<Customer> GetCustomerById(int customerId)
         {
             return await _context.Customers.SingleOrDefaultAsync(x => x.Id == customerId);
         }

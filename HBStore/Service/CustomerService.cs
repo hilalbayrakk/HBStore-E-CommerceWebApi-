@@ -24,7 +24,7 @@ namespace HBStore.Service
 
         public async Task DeleteCustomer(Customer customer)
         {
-            var result = _customerRepository.GetByCustomerId(customer.Id);
+            var result = _customerRepository.GetCustomerById(customer.Id);
             if(result != null)
             {
                 await _customerRepository.DeleteCustomer(customer);
@@ -34,7 +34,7 @@ namespace HBStore.Service
 
         public async Task<Customer> UpdateCustomer(Customer customer, int id)
         {
-            var result = await _customerRepository.GetByCustomerId(id);
+            var result = await _customerRepository.GetCustomerById(id);
             if(result != null)
             {
                 result = customer;
@@ -49,9 +49,9 @@ namespace HBStore.Service
             return await _customerRepository.GetAllCustomer();
         }
 
-        public async Task<Customer> GetByCustomerId(int customerId)
+        public async Task<Customer> GetCustomerById(int customerId)
         {
-           return await _customerRepository.GetByCustomerId(customerId);
+           return await _customerRepository.GetCustomerById(customerId);
         }
 
         public async Task<Customer>GetCustomerByName(string customerName)
