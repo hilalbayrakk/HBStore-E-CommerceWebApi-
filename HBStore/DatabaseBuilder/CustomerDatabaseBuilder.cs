@@ -14,7 +14,8 @@ namespace HBStore.DatabaseBuilder
                     Id = 1,
                     Name = "Hilal",
                     UserId = 1,
-                    OrderId = 1
+                    OrderId = 1,
+                    ComplaintId = 1
 
                 },
                 new Customer
@@ -22,7 +23,8 @@ namespace HBStore.DatabaseBuilder
                     Id = 2,
                     Name = "Koray",
                     UserId = 2,
-                    OrderId =2
+                    OrderId =2,
+                    ComplaintId = 2
                     
 
                 }

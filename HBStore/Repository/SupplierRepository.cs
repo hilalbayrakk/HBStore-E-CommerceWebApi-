@@ -15,23 +15,22 @@ namespace HBStore.Repository
             _context = context;
         }
 
-        public async Task<IEnumerable<Supplier>> GetAllSupplier()
+        public async Task<Supplier> ChangeSupplierVisibility(int id)
         {
             try
             {
-                List<Supplier> temp = await (from db in _context.Suppliers select db).ToListAsync();
-                return temp;
+                Supplier sp = await _context.Suppliers.FindAsync(id);
+                sp.IsVisibility = !sp.IsVisibility;
+
+                await _context.SaveChangesAsync();
+
+                return sp;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return null;
             }
 
-        }
-
-        public async Task<Supplier> ChangeSupplierVisibility(int id)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<Supplier> CreateSupplierOperation(SupplierDTO supplier)
@@ -44,54 +43,21 @@ namespace HBStore.Repository
                 await _context.SaveChangesAsync();
                 return persistSupplier;
             }
-            catch (Exception e)
-            {
-                return null;
-            }
-
-        }
-
-
-        public async Task<Supplier> GetSupplierByEmail(string email)
-        {
-            try
-            {
-                Supplier? supplier = await (from sp in _context.Suppliers
-                                            where sp.Account.Email == email
-                                            select sp).FirstOrDefaultAsync();
-                if (supplier != null)
-                {
-                    return supplier;
-                }
-                return null;
-
-
-            }
             catch (Exception ex)
             {
                 return null;
             }
+        }
 
+        public async Task<IEnumerable<Supplier>> GetAllSupplier()
+        {
+            return await _context.Suppliers.ToListAsync();
         }
 
         public async Task<Supplier> GetSupplierById(int id)
         {
-            try
-            {
-                Supplier? supplier = await _context.Suppliers!.FindAsync(id);
-                if (supplier != null)
-                {
-                    return supplier;
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-
+            return await _context.Suppliers.FirstOrDefaultAsync(x => x.Id == id);
         }
-
 
         public async Task<IEnumerable<Supplier>> GetSupplierByMinRatingAndAbove(double MinRating)
         {
@@ -110,40 +76,16 @@ namespace HBStore.Repository
             {
                 return null;
             }
-
         }
 
-
-        public async Task<Supplier> GetSupplierByName(string Name)
+        public async Task<Supplier> GetSupplierByName(string name)
         {
-            string name = "";
-            string[] temp = Name.Split('-');
-            for (int i = 0; i < temp.Length; i++)
-            {
-                name += temp[i];
-                if (i < temp.Length - 1)
-                    name += " ";
-            }
-            try
-            {
-                Supplier? supplier = await (from sp in _context.Suppliers
-                                            where sp.Name == name
-                                            select sp).FirstOrDefaultAsync();
-                if (supplier != null)
-                {
-                    return supplier;
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-
+            return await _context.Suppliers.FirstOrDefaultAsync(x => x.Name == name);
         }
 
         public async Task<IEnumerable<Supplier>> GetSupplierByRating(double Rating)
         {
+
             try
             {
                 var SupplierListAsync = await (from item in _context.Suppliers
@@ -160,6 +102,7 @@ namespace HBStore.Repository
                 return null;
             }
         }
+
 
         public async Task<IEnumerable<Supplier>> GetSupplierByRatingRange(double DownRating, double UpRating)
         {
@@ -180,10 +123,8 @@ namespace HBStore.Repository
             }
         }
 
-
         public async Task<Supplier> UpdateSupplierOperation(int id, SupplierDTO supplier)
         {
-
             try
             {
                 var sp = await _context.Suppliers.FindAsync(id);
@@ -197,11 +138,11 @@ namespace HBStore.Repository
                 await _context.SaveChangesAsync();
                 return sp;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return null;
             }
-
         }
     }
 }
+

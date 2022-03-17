@@ -12,15 +12,7 @@ namespace HBStore.Service
         {
             _supplierRepository = supplierRepository;
         }
-        public async Task<SupplierDTO> GetSupplierByEmail(string email)
-        {
-            SupplierDTO supplierDTO = new SupplierDTO(await _supplierRepository.GetSupplierByEmail(email));
-            if (supplierDTO != null)
-            {
-                return supplierDTO;
-            }
-            return new SupplierDTO(null);
-        }
+        
 
         public async Task<IEnumerable<SupplierDTO>> GetSupplierByMinRatingAndAbove(string MinRating)
         {
@@ -74,27 +66,27 @@ namespace HBStore.Service
             return supplierDTOs;
         }
 
-        async Task<SupplierDTO> ISupplierService.CreateSupplierOperation(SupplierDTO supplier)
+       public async Task<SupplierDTO> CreateSupplierOperation(SupplierDTO supplier)
         {
             SupplierDTO supplierDTO = new SupplierDTO(await _supplierRepository.GetSupplierByName(supplier.Name));
             if (supplierDTO == null)
             {
                 return new SupplierDTO(await _supplierRepository.CreateSupplierOperation(supplier));
             }
-            return new SupplierDTO(null);
+            throw new InvalidOperationException("Ayni isimde baska bir tedarikci bulunuyor!");
         }
 
-        async Task<SupplierDTO> ISupplierService.DeleteSupplierOperation(int id)
+        public async Task<SupplierDTO> DeleteSupplierOperation(int id)
         {
             SupplierDTO supplierDTO = new SupplierDTO(await _supplierRepository.GetSupplierById(id));
             if (supplierDTO != null)
             {
                 return new SupplierDTO(await _supplierRepository.ChangeSupplierVisibility(id));
             }
-            return new SupplierDTO(null);
+            throw new InvalidOperationException("Silinecek tedarikci bulunamadi!");
         }
 
-        async Task<IEnumerable<SupplierDTO>> ISupplierService.GetAllSupplier()
+        public async Task<IEnumerable<SupplierDTO>> GetAllSupplier()
         {
             IEnumerable<SupplierDTO> supplierDTOs = SupplierToSupplierDTO(await _supplierRepository.GetAllSupplier());
             if (supplierDTOs != null)
@@ -104,34 +96,34 @@ namespace HBStore.Service
             return new List<SupplierDTO> { new SupplierDTO(null) };
         }
 
-        async Task<SupplierDTO> ISupplierService.GetSupplierById(int id)
+        public async Task<SupplierDTO> GetSupplierById(int id)
         {
             SupplierDTO supplierDTO = new SupplierDTO(await _supplierRepository.GetSupplierById(id));
             if (supplierDTO != null)
             {
                 return supplierDTO;
             }
-            return new SupplierDTO(null);
+            throw new InvalidOperationException("Bu ID'ye sahip bir tedarikci bulunamadi!");
         }
 
-        async Task<SupplierDTO> ISupplierService.GetSupplierByName(string name)
+        public async Task<SupplierDTO> GetSupplierByName(string name)
         {
             SupplierDTO supplierDTO = new SupplierDTO(await _supplierRepository.GetSupplierByName(name));
             if (supplierDTO != null)
             {
                 return supplierDTO;
             }
-            return new SupplierDTO(null);
+            throw new InvalidOperationException("Bu isme sahip bir tedarikci bulunamadi!");
         }
 
-        async Task<SupplierDTO> ISupplierService.UpdateSupplierOperation(int id, SupplierDTO supplier)
+        public async Task<SupplierDTO> UpdateSupplierOperation(int id, SupplierDTO supplier)
         {
             SupplierDTO supplierDTO = new SupplierDTO(await _supplierRepository.GetSupplierById(id));
             if (supplierDTO != null)
             {
                 return new SupplierDTO(await _supplierRepository.UpdateSupplierOperation(id, supplier));
             }
-            return new SupplierDTO(null);
+            throw new InvalidOperationException("Guncellenecek tedarikci bulunamadi!");
         }
     }
 

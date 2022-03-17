@@ -17,7 +17,7 @@ namespace HBStore.Controller
             _supplierService = supplierService;
         }
 
-        [HttpGet]
+        [HttpGet("getall")]
         public async Task<IEnumerable<SupplierDTO>> GetAllSupplier()
         {
             return await _supplierService.GetAllSupplier();
@@ -35,11 +35,6 @@ namespace HBStore.Controller
             return await _supplierService.GetSupplierByName(name);
         }
 
-        [HttpGet("email")]
-        public async Task<SupplierDTO> GetSupplierByEmail(string email)
-        {
-            return await _supplierService.GetSupplierByEmail(email);
-        }
 
         [HttpGet("rating")]
         public async Task<IEnumerable<SupplierDTO>> GetSupplierByRating(string Rating)

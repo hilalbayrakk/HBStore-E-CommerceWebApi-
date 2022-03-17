@@ -13,7 +13,7 @@ namespace HBStore.DatabaseBuilder
                 {
                     Id = 1,
                     Name = "X ürünü ile ilgili",
-                    Detail = "blablablablabla"
+                    Detail = "blablablablabla"                   
 
                 },
                 new Complaint
@@ -21,7 +21,7 @@ namespace HBStore.DatabaseBuilder
                     Id = 2,
                     Name = "Y ürünü ile ilgili",
                     Detail = "asdadfsgfgdfdzr"
-
+                 
                 }
             );
         }
