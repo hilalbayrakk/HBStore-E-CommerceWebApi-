@@ -24,7 +24,7 @@ namespace HBStore.Repository
 
         public async Task<Account> CreateAccount(Account account)
         {
-            await _context.Account.AddAsync(account);
+            await _context.Accounts.AddAsync(account);
             await _context.SaveChangesAsync();
             return account;
         }
@@ -43,7 +43,7 @@ namespace HBStore.Repository
 
         public async Task<Account> UpdateAccountPassword(Account account, string oldpassword, string newpassword)
         {
-            _context.Account.Update(account);
+            _context.Accounts.Update(account);
             await _context.SaveChangesAsync();
             return account;
         }
@@ -81,14 +81,14 @@ namespace HBStore.Repository
 
         public async Task<Account> FindAccountByEmailAndPasswordAsync(LoginDTO loginDTO)
         {
-            Account accountFinded = (from x in _context.Account
+            Account accountFinded = (from x in _context.Accounts
                                      where x.Email == loginDTO.Email && x.Password == loginDTO.Password
                                      select x).FirstOrDefault();
             return accountFinded;
         }
         public Account FindAccountByEmailAndPassword(LoginDTO loginDTO)
         {
-            Account accountFinded = (from x in _context.Account
+            Account accountFinded = (from x in _context.Accounts
                                      where x.Email == loginDTO.Email && x.Password == loginDTO.Password
                                      select x).FirstOrDefault();
             return accountFinded;
@@ -96,14 +96,14 @@ namespace HBStore.Repository
 
         public Account findAccountById(int id)
         {
-            Account accountByID = (from x in _context.Account
+            Account accountByID = (from x in _context.Accounts
                                    where x.Id == id
                                    select x).FirstOrDefault();
             return accountByID;
         }
         public async Task<Account> findAccountByIdAsync(int id)
         {
-            Account accountByID = (from x in _context.Account
+            Account accountByID = (from x in _context.Accounts
                                    where x.Id == id
                                    select x).FirstOrDefault();
             return accountByID;

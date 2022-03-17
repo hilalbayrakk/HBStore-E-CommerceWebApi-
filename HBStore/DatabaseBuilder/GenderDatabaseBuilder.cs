@@ -11,12 +11,14 @@ namespace HBStore.DatabaseBuilder
               new Gender
               {
                   Id = 1,
-                  Name = "Kız"
+                  Name = "Kız",
+                  UserId = 1
               },
                new Gender
                {
                    Id = 2,
-                   Name = "Erkek"
+                   Name = "Erkek", 
+                   UserId = 2
                }
           );
         }

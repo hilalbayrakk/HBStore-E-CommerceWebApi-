@@ -8,6 +8,8 @@ namespace HBStore.Model
         public string OpenAddress2 { get; set; }
         public int DistrictId { get; set; }
         public District District { get; set; }
+         public int CityId { get; set; }
+        public City City { get; set; }
         public Company Company { get; set; }
 
     }

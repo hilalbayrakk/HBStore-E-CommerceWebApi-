@@ -12,13 +12,15 @@ namespace HBStore.DatabaseBuilder
                 new Complaint
                 {
                     Id = 1,
-                    Detail = "blablablablabla",
+                    Name = "X ürünü ile ilgili",
+                    Detail = "blablablablabla"
 
                 },
                 new Complaint
                 {
                     Id = 2,
-                    Detail = "asdadfsgfgdfdzr",
+                    Name = "Y ürünü ile ilgili",
+                    Detail = "asdadfsgfgdfdzr"
 
                 }
             );
@@ -28,6 +30,7 @@ namespace HBStore.DatabaseBuilder
             modelBuilder.Entity<Complaint>(entity =>
     {
         entity.HasKey(e => e.Id);
+        entity.Property(e => e.Name).IsRequired();
         entity.Property(e => e.Detail).IsRequired();
 
     });

@@ -12,6 +12,7 @@ namespace HBStore.DatabaseBuilder
                 new User
                 {
                     Id = 1,
+                    UserName = "hilalbayrak",
                     FirstName = "Hilal",
                     LastName = "BAYRAK",
                     Email = "hilal@gmailcom",
@@ -22,6 +23,7 @@ namespace HBStore.DatabaseBuilder
                 new User
                 {
                     Id = 2,
+                    UserName = "koraybayrak",
                     FirstName = "Koray",
                     LastName = "BAYRAK",
                     Email = "koray@gmailcom",
@@ -35,14 +37,15 @@ namespace HBStore.DatabaseBuilder
             modelBuilder.Entity<User>(entity =>
     {
         entity.HasKey(e => e.Id);
+         entity.Property(e => e.UserName).IsRequired();
         entity.Property(e => e.FirstName).IsRequired();
         entity.Property(e => e.LastName).IsRequired();
         entity.Property(e => e.Email).IsRequired();
         entity.Property(e => e.Password).IsRequired();
         entity.Property(e => e.GsmNumber).IsRequired();
         entity.Property(e => e.BirthDate);
-        entity.HasOne(p => p.Gender).WithMany(c => c!.Users).HasForeignKey(p => p.GenderId);
         entity.HasOne(p => p.Account).WithMany(c => c!.Users).HasForeignKey(p => p.AccountId);
+        entity.HasOne(p => p.Gender).WithOne(c => c!.User).HasForeignKey<User>(p => p.GenderId);
 
 
     });

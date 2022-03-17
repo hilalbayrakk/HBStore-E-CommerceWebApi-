@@ -51,6 +51,9 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<ICommentService, CommentService>();
+
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
 
@@ -59,6 +62,14 @@ builder.Services.AddScoped<IComplaintService, ComplaintService>();
 
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
+
+builder.Services.AddScoped<IGenderRepository,GenderRepository>();
+builder.Services.AddScoped<IGenderService,GenderService>();
+
+builder.Services.AddScoped<IIncidenceRepository,IncidenceRepository>();
+builder.Services.AddScoped<IIncidenceService,IncidenceService>();
+
+builder.Services.AddScoped<ILoginService,LoginService>();
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
@@ -75,8 +86,6 @@ builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -92,7 +101,7 @@ app.UseCors(x => x
       .AllowAnyOrigin()
       .AllowAnyMethod()
       .AllowAnyHeader());
-app.UseMiddleware<JwtMiddleware>();
+//app.UseMiddleware<JwtMiddleware>();
 
 app.UseAuthorization();
 
