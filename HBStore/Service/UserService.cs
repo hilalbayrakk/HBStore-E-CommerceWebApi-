@@ -19,7 +19,7 @@ namespace HBStore.Service
             {
                 return await _userRepository.AddUser(user);
             }
-            throw new InvalidOperationException("Bu kullanıcı adı başka bir kullanıcı tarafından kullanılıyor!");
+            throw new InvalidOperationException("Bu kullanici adi baska bir kullanici tarafindan kullaniliyor!");
         }
 
         public async Task DeleteUser(User user)
@@ -29,7 +29,7 @@ namespace HBStore.Service
             {
                 await _userRepository.DeleteUser(user);
             }
-            throw new Exception("Silinecek kullanıcı bulunamadı!");
+            throw new Exception("Silinecek kullanici bulunamadi!");
         }
 
         public async Task<User> UpdateUser(User user, int id)
@@ -41,7 +41,7 @@ namespace HBStore.Service
                 await _userRepository.UpdateUser(user);
                 return user;
             }
-            throw new InvalidOperationException("Güncellenecek kullanıcı bulunamadı!");
+            throw new InvalidOperationException("Guncellenecek kullanici bulunamadi!");
         }
 
         public async Task<List<User>> GetAllUser()
@@ -60,7 +60,7 @@ namespace HBStore.Service
             {
                 return await result;
             }
-            throw new InvalidOperationException("Kullanıcı bulunamadı!");
+            throw new InvalidOperationException("Kullanici bulunamadi!");
         }
 
         public async Task<User> GetUserByAccountId(int accountId)

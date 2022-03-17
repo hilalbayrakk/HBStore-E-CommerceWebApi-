@@ -30,7 +30,7 @@ builder.Services.AddControllers().AddFluentValidation(opt =>
                 {
                     return new CustomBadRequest(context);
                 };
-            });
+            }).AddJsonOptions(x=>x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 

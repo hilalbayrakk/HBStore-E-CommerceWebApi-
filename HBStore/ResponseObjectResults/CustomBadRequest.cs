@@ -25,7 +25,7 @@ namespace HBStore.ResponseObjectResults
 
                 for (int i = 0; i < context.ModelState.Count; i++)
                 {
-                    string message = String.Format("{0} formatı hatalı girilmiştir lütfen kontrol ediniz!", context.ModelState.Values.ElementAt(i).Errors[i].ErrorMessage); 
+                    string message = String.Format("{0} formatı hatalı girilmiştir, lütfen kontrol ediniz!", context.ModelState.Values.ElementAt(i).Errors[i].ErrorMessage); 
                     responseBody.Messages.Add(message);
                 }
 
