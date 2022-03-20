@@ -1,16 +1,6 @@
-using HBStore.DTO;
-using HBStore.Helper;
-using HBStore.Interface;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class LoginService : ILoginService
+    public class LoginService : ControllerBase, ILoginService
     {
         private readonly AppSettings _appSettings;
         private readonly IAccountRepository _accountRepository;

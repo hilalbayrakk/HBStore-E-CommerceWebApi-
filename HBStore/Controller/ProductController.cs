@@ -31,7 +31,7 @@ namespace HBStore.Controller
 
         }
         [HttpPut("update")]
-        public async Task<Product> UpdateProduct(int id, Product product)
+        public async Task<ActionResult<Product>> UpdateProduct(int id, Product product)
         {
             var result = await _productService.UpdateProduct(id, product);
             return result;

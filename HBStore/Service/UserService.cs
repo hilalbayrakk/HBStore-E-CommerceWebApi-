@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class UserService : IUserService
+    public class UserService : ControllerBase, IUserService
     {
         private readonly IUserRepository _userRepository;
 

@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class CustomerService : ICustomerService
+    public class CustomerService : ControllerBase, ICustomerService
     {
         private readonly ICustomerRepository _customerRepository;
 

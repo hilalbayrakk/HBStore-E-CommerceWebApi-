@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class CommentService : ICommentService
+    public class CommentService : ControllerBase, ICommentService
     {
         private readonly ICommentRepository _commentRepository;
 

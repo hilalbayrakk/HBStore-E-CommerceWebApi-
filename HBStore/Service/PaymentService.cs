@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class PaymentService : IPaymentService
+    public class PaymentService : ControllerBase, IPaymentService
     {
         private readonly IPaymentRepository _paymentRepository;
 

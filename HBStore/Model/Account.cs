@@ -1,5 +1,3 @@
-using HBStore.DTO;
-
 namespace HBStore.Model
 {
     public class Account

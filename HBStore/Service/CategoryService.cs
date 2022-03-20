@@ -1,10 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
-
 namespace HBStore.Service
 {
-    public class CategoryService : ICategoryService
+    public class CategoryService : ControllerBase, ICategoryService
     {
         private readonly ICategoryRepository _categoryRepository;
 

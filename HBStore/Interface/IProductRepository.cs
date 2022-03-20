@@ -1,6 +1,3 @@
-using HBStore.DTO;
-using HBStore.Model;
-
 namespace HBStore.Interface
 {
     public interface IProductRepository

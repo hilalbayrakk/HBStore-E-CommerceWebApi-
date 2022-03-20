@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class CompanyService : ICompanyService
+    public class CompanyService : ControllerBase, ICompanyService
     {
         private readonly ICompanyRepository _companyRepository;
 

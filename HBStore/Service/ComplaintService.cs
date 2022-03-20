@@ -1,10 +1,6 @@
-using HBStore.Context;
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class ComplaintService : IComplaintService
+    public class ComplaintService : ControllerBase, IComplaintService
     {
         private readonly IComplaintRepository _complaintRepository;
 

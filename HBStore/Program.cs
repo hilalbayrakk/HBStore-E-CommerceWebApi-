@@ -1,17 +1,10 @@
-using FluentValidation.AspNetCore;
-using FluentValidation;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.AspNetCore.Mvc;
 
 
 using System.Net;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using HBStore.Interface;
-using HBStore.Repository;
-using HBStore.Service;
+
 using HBStore.Context;
 using HBStore.Security;
 using HBStore.ResponseObjectResults;

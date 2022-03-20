@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class AddressService : IAddressService
+    public class AddressService : ControllerBase, IAddressService
     {
         private IAddressRepository _addressRepository;
 

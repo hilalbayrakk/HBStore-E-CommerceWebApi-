@@ -1,8 +1,3 @@
-using HBStore.Context;
-using HBStore.Interface;
-using HBStore.Model;
-using Microsoft.EntityFrameworkCore;
-
 namespace HBStore.Repository
 {
     public class PaymentRepository : IPaymentRepository

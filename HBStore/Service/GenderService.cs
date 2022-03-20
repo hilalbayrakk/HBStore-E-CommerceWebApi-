@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class GenderService : IGenderService
+    public class GenderService : ControllerBase, IGenderService
     {
         private readonly IGenderRepository _genderRepository;
 

@@ -59,7 +59,8 @@ namespace HBStore.DatabaseBuilder
                     UnitsInStock = 10,
                     BrandId = 1,
                     CategoryId = 1,
-                    CompanyId = 1
+                    CompanyId = 1,
+                    BasketId = 1
                 },
                 new Product
                 {
@@ -69,7 +70,8 @@ namespace HBStore.DatabaseBuilder
                     UnitsInStock = 15,
                     BrandId = 2,
                     CategoryId = 2,
-                    CompanyId = 2
+                    CompanyId = 2, 
+                    BasketId = 2
                 }
             );
 
@@ -100,6 +102,7 @@ namespace HBStore.DatabaseBuilder
                 entity.Property(e => e.Name).IsRequired();
                 entity.HasOne(e => e.Category).WithMany(e => e!.Products).HasForeignKey(e => e.CategoryId);
                 entity.HasOne(e => e.Brand).WithMany(e => e!.Products).HasForeignKey(e=> e.BrandId);
+                entity.HasOne(e => e.Basket).WithMany(e => e!.Products).HasForeignKey(e=> e.BasketId);
             });
 
             SetDataToDB(modelBuilder);

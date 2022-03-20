@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class BrandService : IBrandService
+    public class BrandService : ControllerBase, IBrandService
     {
         private readonly IBrandRepository _brandRepository;
 

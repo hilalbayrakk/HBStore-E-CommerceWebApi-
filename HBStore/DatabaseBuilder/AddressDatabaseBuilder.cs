@@ -1,6 +1,3 @@
-using HBStore.Model;
-using Microsoft.EntityFrameworkCore;
-
 namespace HBStore.DatabaseBuilder
 {
     public static class AddressDatabaseBuilder

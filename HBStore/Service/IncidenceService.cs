@@ -1,10 +1,6 @@
-using HBStore.DTO;
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class IncidenceService : IIncidenceService
+    public class IncidenceService : ControllerBase, IIncidenceService
 {
     private readonly IIncidenceRepository _IncidenceRepository;
     public IncidenceService(IIncidenceRepository incidenceRepository)

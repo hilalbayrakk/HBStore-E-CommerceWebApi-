@@ -8,6 +8,9 @@ namespace HBStore.Model
         public int UnitsInStock { get; set; }
         public int QuantityPerUnit { get; set; }
 
+
+        public int BasketId { get; set; }
+        public Basket Basket { get; set; }
         public int CategoryId { get; set; }
         public virtual Category? Category { get; set; }
         public int BrandId { get; set; }

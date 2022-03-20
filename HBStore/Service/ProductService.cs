@@ -1,10 +1,11 @@
 using HBStore.DTO;
 using HBStore.Interface;
 using HBStore.Model;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HBStore.Service
 {
-    public class ProductService : IProductService
+    public class ProductService : ControllerBase, IProductService
     {
         private readonly IProductRepository _productRepository;
 
@@ -12,14 +13,14 @@ namespace HBStore.Service
         {
             _productRepository = productRepository;
         }
-        public async Task<Product> AddProduct(Product product)
+        public async Task<ActionResult<Product>> AddProduct(Product product)
         {
             var result = await _productRepository.GetProductByName(product.Name);
             if (result == null)
             {
                 return await _productRepository.AddProduct(product);
             }
-            throw new InvalidOperationException("Aynı isimde baska bir urun bulunuyor!");
+            return BadRequest("Aynı isimde baska bir urun bulunuyor!");
         }
 
         public async Task DeleteProduct(Product product)
@@ -37,7 +38,7 @@ namespace HBStore.Service
             return await _productRepository.GetAllProduct();
         }
 
-        public async Task<Product> UpdateProduct(int id, Product product)
+        public async Task<ActionResult<Product>> UpdateProduct(int id, Product product)
         {
             var updatedProduct = await _productRepository.GetByProductId(id);
             if(updatedProduct != null)
@@ -46,7 +47,7 @@ namespace HBStore.Service
                 await _productRepository.UpdateProduct(product);
                 return product;
             }
-            throw new InvalidOperationException("Guncellenecek urun bulunamadi!");
+            return BadRequest("Guncellenecek urun bulunamadi!");
         }
 
         public async Task<Product> GetProductByName(string productName)

@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class AccountService : IAccountService
+    public class AccountService : ControllerBase, IAccountService
     {
         private readonly IAccountRepository _accountRepository;
         public AccountService(IAccountRepository accountRepository)

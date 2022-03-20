@@ -1,9 +1,6 @@
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class OrderService : IOrderService
+    public class OrderService : ControllerBase, IOrderService
     {
         private readonly IOrderRepository _orderRepository;
 

@@ -1,12 +1,9 @@
-using HBStore.DTO;
-using HBStore.Model;
-
 namespace HBStore.Interface
 {
     public interface IProductService
     {
-        Task<Product> AddProduct(Product product);
-        Task<Product> UpdateProduct(int id, Product product);
+        Task<ActionResult<Product>> AddProduct(Product product);
+        Task<ActionResult<Product>> UpdateProduct(int id, Product product);
         Task DeleteProduct(Product product);
         Task<List<Product>> GetAllProduct();
         Task<Product> GetByProductId(int productId);

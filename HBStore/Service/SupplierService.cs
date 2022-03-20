@@ -1,10 +1,6 @@
-using HBStore.DTO;
-using HBStore.Interface;
-using HBStore.Model;
-
 namespace HBStore.Service
 {
-    public class SupplierService : ISupplierService
+    public class SupplierService : ControllerBase, ISupplierService
     {
         private readonly ISupplierRepository _supplierRepository;
 

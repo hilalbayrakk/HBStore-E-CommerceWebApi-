@@ -1,13 +1,10 @@
-using HBStore.DatabaseBuilder;
-using HBStore.Model;
-using Microsoft.EntityFrameworkCore;
-
 namespace HBStore.Context
 {
     public class HBStoreDbContext : DbContext
     {
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Address> Address { get; set; }
+         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<City> Cities{ get; set; }
@@ -38,6 +35,7 @@ namespace HBStore.Context
             base.OnModelCreating(modelBuilder);
             AccountDatabaseBuilder.TableBuilder(modelBuilder);
             AddressDatabaseBuilder.TableBuilder(modelBuilder);
+            BasketDatabaseBuilder.TableBuilder(modelBuilder);
             ComplaintDatabaseBuilder.TableBuilder(modelBuilder);
             CustomerDatabaseBuilder.TableBuilder(modelBuilder);
             GenderDatabaseBuilder.TableBuilder(modelBuilder);
