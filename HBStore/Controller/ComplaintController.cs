@@ -1,7 +1,3 @@
-using HBStore.Model;
-using HBStore.Interface;
-using Microsoft.AspNetCore.Mvc;
-
 namespace HBStore.Controller
 {
     [ApiController]

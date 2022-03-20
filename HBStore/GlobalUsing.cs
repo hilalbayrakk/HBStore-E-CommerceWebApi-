@@ -17,6 +17,7 @@ global using Microsoft.Extensions.DependencyInjection;
 global using FluentValidation;
 global using FluentValidation.AspNetCore;
 
+global using HBStore.Security;
 global using HBStore.Helper;
 global using HBStore.DTO;
 global using HBStore.Model;

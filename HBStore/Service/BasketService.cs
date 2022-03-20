@@ -66,9 +66,9 @@ namespace HBStore.Service
             return await _basketRepository.GetBasketByCustomerId(customerId);
         }
 
-        public async Task<ActionResult<Basket>> UpdateBasket(Basket basket)
+        public async Task<ActionResult<Basket>> UpdateBasket(Basket basket, Product product)
         {
-            var result = await _basketRepository.GetBasketById(basket.Id);
+            var result = await _basketRepository.GetBasketById(product.Id);
             if(result != null)
             {
                 result = basket;
@@ -78,5 +78,5 @@ namespace HBStore.Service
             return BadRequest("Guncellenecek sepet bulunamadi!");
         }
 
-    }
+           }
 }

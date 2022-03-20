@@ -7,7 +7,7 @@ namespace HBStore.Interface
         Task DeleteProduct(Product product);
         Task<ActionResult<Basket>> CreateBasket(Basket basket);
         Task DeleteBasket(Basket basket);
-        Task<ActionResult<Basket>> UpdateBasket(Basket basket);
+        Task<ActionResult<Basket>> UpdateBasket(Basket basket, Product product);
         Task<List<Basket>> GetAllBasket();
         Task<Basket> GetBasketById(int basketId);
         Task<Basket> GetBasketByCustomerId(int customerId);
