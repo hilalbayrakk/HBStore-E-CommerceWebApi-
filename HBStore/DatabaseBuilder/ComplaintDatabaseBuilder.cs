@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HBStore.DatabaseBuilder
 {
-    public class ComplaintDatabaseBuilder
+    public static class ComplaintDatabaseBuilder
     {
         static void SetDataToDB(ModelBuilder modelBuilder)
         {

@@ -15,8 +15,8 @@ namespace HBStore.DatabaseBuilder
                     UserName = "hilalbayrak",
                     FirstName = "Hilal",
                     LastName = "BAYRAK",
-                    Email = "hilal@gmailcom",
-                    Password = "12345",
+                    Email = "hilal.bayrak@gmailcom",
+                    Password = "123456",
                     GsmNumber = "05395679685"
 
                 },
@@ -26,8 +26,8 @@ namespace HBStore.DatabaseBuilder
                     UserName = "koraybayrak",
                     FirstName = "Koray",
                     LastName = "BAYRAK",
-                    Email = "koray@gmailcom",
-                    Password = "54321",
+                    Email = "koray.bayrak@gmailcom",
+                    Password = "654321",
                     GsmNumber = "05349435678"
                 }
             );
@@ -37,7 +37,7 @@ namespace HBStore.DatabaseBuilder
             modelBuilder.Entity<User>(entity =>
     {
         entity.HasKey(e => e.Id);
-         entity.Property(e => e.UserName).IsRequired();
+        entity.Property(e => e.UserName).IsRequired();
         entity.Property(e => e.FirstName).IsRequired();
         entity.Property(e => e.LastName).IsRequired();
         entity.Property(e => e.Email).IsRequired();

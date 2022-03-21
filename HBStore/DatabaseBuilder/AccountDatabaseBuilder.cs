@@ -1,24 +1,22 @@
 namespace HBStore.DatabaseBuilder
 {
-    public class AccountDatabaseBuilder
+    public static class AccountDatabaseBuilder
     {
         static void SetDataToDB(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>().HasData(
              new Account
              {
-                 Id = 1,
-                 Email = "hilal@gmail.com",
+                 Id = 3,
+                 Email = "hilal.bayrak@gmail.com",
                  Password = "123456",
-                 IsBlocked = true,
                  Visibility = true
              },
              new Account
              {
-                 Id = 2,
-                 Email = "bayrak@gmail.com",
+                 Id = 4,
+                 Email = "koray.bayrak@gmail.com",
                  Password = "654321",
-                 IsBlocked = true,
                  Visibility = true
              }
          );
@@ -45,10 +43,8 @@ namespace HBStore.DatabaseBuilder
                  entity.HasKey(e => e.Id);
                  entity.Property(e => e.Email).IsRequired();
                  entity.Property(e => e.Password).IsRequired();
-                 entity.Property(e => e.IsBlocked);
                  entity.Property(e => e.Visibility);
-                 entity.HasMany(e => e.Role).WithMany(e => e.Account).UsingEntity(j => j.ToTable("Account_Role"));
-
+                  entity.HasMany(e => e.Role).WithMany(e => e.Account).UsingEntity(j => j.ToTable("Account_Role"));
              });
 
             modelBuilder.Entity<Role>(entity =>
@@ -56,6 +52,7 @@ namespace HBStore.DatabaseBuilder
                entity.HasKey(e => e.Id);
                entity.Property(e => e.Name).IsRequired();
            });
+
 
             SetDataToDB(modelBuilder);
         }

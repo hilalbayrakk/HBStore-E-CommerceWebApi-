@@ -8,11 +8,6 @@ namespace HBStore.Service
             _accountRepository = accountRepository;
         }
 
-        public Task<Account> BlockAccount()
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<Account> ChangeVisibilityOfAccount()
         {
             throw new NotImplementedException();

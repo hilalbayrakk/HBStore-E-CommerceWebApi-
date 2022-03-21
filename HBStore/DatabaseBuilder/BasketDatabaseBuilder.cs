@@ -1,6 +1,6 @@
 namespace HBStore.DatabaseBuilder
 {
-    public class BasketDatabaseBuilder
+    public static class BasketDatabaseBuilder
     {
         static void SetDataToDB(ModelBuilder modelBuilder)
         {

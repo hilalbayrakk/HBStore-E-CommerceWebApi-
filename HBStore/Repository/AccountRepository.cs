@@ -47,11 +47,6 @@ namespace HBStore.Repository
             throw new NotImplementedException();
         }
 
-        public async Task<Account> BlockAccount()
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<Account> Role()
         {
             throw new NotImplementedException();

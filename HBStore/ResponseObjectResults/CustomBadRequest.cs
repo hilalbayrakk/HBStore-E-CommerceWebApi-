@@ -1,11 +1,3 @@
-using System.IO.Pipelines;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System.Net;
-using System.Net.Http;
-using HBStore.DTO;
-
 namespace HBStore.ResponseObjectResults
 {
     public class CustomBadRequest : IActionResult

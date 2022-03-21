@@ -8,7 +8,6 @@ namespace HBStore.Interface
         Task<Account> ChangeVisibilityOfAccount();
         Task<Account> UpdateAccountByEmail(Account account, string email);
         Task<Account> UpdateAccountPassword(Account account, string oldpassword, string newpassword);
-        Task<Account> BlockAccount();
         Task<Account> Role();
 
     }

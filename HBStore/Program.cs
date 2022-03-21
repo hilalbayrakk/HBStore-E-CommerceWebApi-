@@ -1,15 +1,3 @@
-
-
-using System.Net;
-using FluentValidation;
-using FluentValidation.AspNetCore;
-using HBStore.Interface;
-
-using HBStore.Context;
-using HBStore.Security;
-using HBStore.ResponseObjectResults;
-using HBStore.Helper;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

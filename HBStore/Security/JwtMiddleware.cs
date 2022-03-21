@@ -1,12 +1,3 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Text;
-using HBStore.Helper;
-using HBStore.Interface;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-
-
-
 namespace HBStore.Security
 {
     public class JwtMiddleware

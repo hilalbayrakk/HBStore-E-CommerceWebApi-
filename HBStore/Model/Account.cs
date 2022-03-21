@@ -5,7 +5,6 @@ namespace HBStore.Model
         public int Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public bool IsBlocked { get; set; }
         public bool Visibility { get; set; }
         public virtual ICollection<Role>? Role { get; set; }
         public virtual ICollection<User>Users { get; set; }
@@ -22,12 +21,11 @@ namespace HBStore.Model
         }
 
 
-        public Account(int id, string email, string password, bool isblocked, bool visibility)
+        public Account(int id, string email, string password, bool visibility)
         {
             this.Id = id;
             this.Email = email;
             this.Password = password;
-            this.IsBlocked = isblocked;
             this.Visibility = visibility;
         }
     }

@@ -1,8 +1,3 @@
-using HBStore.Model;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
-
-
 namespace HBStore.Security
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]

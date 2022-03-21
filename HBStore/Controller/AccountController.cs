@@ -20,7 +20,6 @@ namespace HBStore.Controller
             {
                 Email = account.Email,
                 Password = account.Password,
-                IsBlocked = account.IsBlocked,
                 Visibility = account.Visibility
             };
             return await _accountService.CreateNewAccount(accountresult);

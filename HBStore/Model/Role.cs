@@ -6,5 +6,7 @@ namespace HBStore.Model
         public string Name { get; set; }
 
         public virtual ICollection<Account> Account { get; set; }
+
+
     }
 }
